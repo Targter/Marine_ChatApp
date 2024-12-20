@@ -99,7 +99,7 @@ export function ChatWindow() {
 
   if (!currentChat) {
     return (
-      <div className="flex-1 flex items-center md:justify-center justify-start">
+      <div className="flex-1 flex items-center  justify-center ">
         <p className="text-white md:text-lg text-sm mt-3">Select or create a chat to get started</p>
       </div>
     );
@@ -107,7 +107,7 @@ export function ChatWindow() {
 
   return (
     <div className="flex-1 flex flex-col h-[calc(100vh-4rem)] ">
-      <div className="flex-1 md:overflow-y-auto overflow-hidden md:p-4 p-0 space-y-4   ">
+      <div className="flex-1 overflow-y-auto  md:p-4 p-0 space-y-4   ">
         {!user.isPremium && messages.length > 10 && (
           <div className="text-center py-2 bg-[#424242] text-indigo-50 rounded-lg">
             Upgrade to premium to see your full chat history
