@@ -99,7 +99,7 @@ export function ChatWindow() {
 
   if (!currentChat) {
     return (
-      <div className="flex-1 flex items-center md:justify-center justify-start bg-red-50 over">
+      <div className="flex-1 flex items-center md:justify-center justify-start">
         <p className="text-white md:text-lg text-sm mt-3">Select or create a chat to get started</p>
       </div>
     );
