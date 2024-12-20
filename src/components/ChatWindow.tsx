@@ -106,7 +106,7 @@ export function ChatWindow() {
   }
 
   return (
-    <div className="flex-1 flex flex-col h-[calc(100vh-4rem)] ">
+    <div className="flex-1 flex flex-col h-[calc(100vh-4rem)] max-h-screen">
       <div className="flex-1 overflow-y-auto  md:p-4 p-0 space-y-4   ">
         {!user.isPremium && messages.length > 10 && (
           <div className="text-center py-2 bg-[#424242] text-indigo-50 rounded-lg">

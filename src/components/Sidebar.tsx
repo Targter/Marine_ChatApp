@@ -13,7 +13,7 @@ export function Sidebar({ isOpen }) {
   };
 
   return (
-    <div className={`lg:w-64 md:w-44 w-28 bg-[#171717]  max:h-[calc(100vh-4rem)]  border-r overflow-y-auto ${
+    <div className={`lg:w-64 md:w-44 w-28 bg-[#171717]  max-h-[calc(100vh-4rem)]  border-r overflow-y-auto ${
       isOpen ? 'block' : 'hidden'
     } `}>
     <div className='w-full flex justify-center p-2 h-auto'>  
