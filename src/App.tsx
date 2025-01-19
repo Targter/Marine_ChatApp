@@ -1,26 +1,29 @@
-import { Navbar } from './components/Navbar';
-import { Sidebar } from './components/Sidebar';
-import { ChatWindow } from './components/ChatWindow';
-import { PremiumBanner } from './components/PremiumBanner';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import Page1 from './page/page1';
+import RegisterUser from "./components/RegisterUser"
+import Login from "./components/Login"
+// import 'regenerator-runtime/runtime';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import ResetPasswordPage from "./components/ResetPasswordPage";
 
-import 'regenerator-runtime/runtime';
-import { useState } from 'react';
 function App() {
 
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // Function to toggle the sidebar
-  const toggleSidebar = () => {
-    setIsSidebarOpen(prevState => !prevState);
-  };
   return (
-    <div className="min-h-screen bg-[#212121] text-white flex md:justify-center justify-end overflow-hidden ">
-      <Navbar toggleSidebar={toggleSidebar}  />
-      <div className="pt-16 flex w-full">
-        <Sidebar isOpen={isSidebarOpen}  />
-        <ChatWindow />
-      </div>
-    </div>
+    <>
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+          <Routes>
+            <Route path="/Register" element={<RegisterUser/>} />
+            <Route path="/Login" element={<Login/>} />
+            <Route path="/ForgetPassword" element={<ResetPasswordPage/>} />
+            <Route path="/"
+            element={<Page1 /> }
+          />
+          </Routes>
+    </Router>
+    <ToastContainer />
+    </>
   );
 }
 
